@@ -1,0 +1,164 @@
+
+[
+    {
+      "title": "The Great Gatsby",
+      "ISBN": "9780743273565",
+      "author": "F. Scott Fitzgerald",
+      "category": "fiction",
+      "price": 10.99,
+      "stock": 15
+    },
+    {
+      "title": "1984",
+      "ISBN": "9780451524935",
+      "author": "George Orwell",
+      "category": "fiction",
+      "price": 9.99,
+      "stock": 12
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "ISBN": "9780060935467",
+      "author": "Harper Lee",
+      "category": "fiction",
+      "price": 8.99,
+      "stock": 18
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "ISBN": "9780316769488",
+      "author": "J.D. Salinger",
+      "category": "fiction",
+      "price": 12.99,
+      "stock": 20
+    },
+    {
+      "title": "The Hobbit",
+      "ISBN": "9780547928227",
+      "author": "J.R.R. Tolkien",
+      "category": "fiction",
+      "price": 15.99,
+      "stock": 10
+    },
+    {
+      "title": "Pride and Prejudice",
+      "ISBN": "9781986431484",
+      "author": "Jane Austen",
+      "category": "fiction",
+      "price": 9.99,
+      "stock": 22
+    },
+    {
+      "title": "A Brief History of Time",
+      "ISBN": "9780553380163",
+      "author": "Stephen Hawking",
+      "category": "educational",
+      "price": 18.99,
+      "stock": 10
+    },
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "ISBN": "9780062316097",
+      "author": "Yuval Noah Harari",
+      "category": "history",
+      "price": 19.99,
+      "stock": 10
+    },
+    {
+      "title": "Charlotte's Web",
+      "ISBN": "9780061120268",
+      "author": "E.B. White",
+      "category": "children",
+      "price": 7.99,
+      "stock": 30
+    },
+    {
+      "title": "Green Eggs and Ham",
+      "ISBN": "9780001713062",
+      "author": "Dr. Seuss",
+      "category": "children",
+      "price": 6.99,
+      "stock": 25
+    },
+    {
+      "title": "Matilda",
+      "ISBN": "9780142410370",
+      "author": "Roald Dahl",
+      "category": "children",
+      "price": 8.99,
+      "stock": 17
+    },
+    {
+      "title": "The Very Hungry Caterpillar",
+      "ISBN": "9780241003008",
+      "author": "Eric Carle",
+      "category": "children",
+      "price": 5.99,
+      "stock": 29
+    },
+    {
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "ISBN": "9780439708180",
+      "author": "J.K. Rowling",
+      "category": "fiction",
+      "price": 10.99,
+      "stock": 40
+    },
+    {
+      "title": "Moby Dick",
+      "ISBN": "9781503280786",
+      "author": "Herman Melville",
+      "category": "fiction",
+      "price": 12.99,
+      "stock": 7
+    },
+    {
+      "title": "War and Peace",
+      "ISBN": "9781400079988",
+      "author": "Leo Tolstoy",
+      "category": "history",
+      "price": 13.99,
+      "stock": 6
+    },
+    {
+      "title": "The Art of War",
+      "ISBN": "9781599869773",
+      "author": "Sun Tzu",
+      "category": "history",
+      "price": 9.99,
+      "stock": 15
+    },
+    {
+      "title": "The Diary of a Young Girl",
+      "ISBN": "9780553296983",
+      "author": "Anne Frank",
+      "category": "history",
+      "price": 10.99,
+      "stock": 20
+    },
+    {
+      "title": "The Lord of the Rings",
+      "ISBN": "9780544003415",
+      "author": "J.R.R. Tolkien",
+      "category": "fiction",
+      "price": 22.99,
+      "stock": 13
+    },
+    {
+      "title": "The Alchemist",
+      "ISBN": "9780062315007",
+      "author": "Paulo Coelho",
+      "category": "fiction",
+      "price": 10.99,
+      "stock": 18
+    },
+    {
+      "title": "The Power of Habit",
+      "ISBN": "9780812981605",
+      "author": "Charles Duhigg",
+      "category": "educational",
+      "price": 16.99,
+      "stock": 21
+    }
+  ]
+  
