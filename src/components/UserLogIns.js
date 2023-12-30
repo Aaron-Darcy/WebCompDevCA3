@@ -1,7 +1,7 @@
-// users.js
+// UserLogins.js - Admin for admin dashboard & user for regular customer page
 const UserLogIns = [
-  { username: "admin", password: "admin", Role: "Admin"},
-  { username: "user1", password: "user1", Role: "Customer" }
+  { username: "admin", password: "admin", Role: "Admin" },
+  { username: "user", password: "user", Role: "Customer" },
 ];
 
 export default UserLogIns;

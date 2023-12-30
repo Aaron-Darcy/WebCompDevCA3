@@ -1,4 +1,5 @@
 // App.js
+// Imports
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
@@ -17,16 +18,17 @@ function App() {
 
   return (
     // Routes
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/adminDashboard" element={<AdminDashboard />} /> 
-          <Route path="/customerPage" element={<CustomerPage />} /> 
-          <Route path="/" element={<LoginPage />} />
-        </Routes>
-      </div>
-    </Router>
+      <Router>
+        <div className="App">
+          {/* Include LogoutButton wherever needed, perhaps in a Navbar or similar component */}
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/adminDashboard" element={<AdminDashboard />} />
+            <Route path="/customerPage" element={<CustomerPage />} />
+            {/* Redirect or other routes */}
+          </Routes>
+        </div>
+      </Router>
   );
 }
 

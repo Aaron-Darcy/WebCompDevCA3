@@ -1,16 +1,20 @@
 // server.js
 // Import
-const mongoose = require('mongoose');
-const express = require('express');
+const mongoose = require("mongoose");
+const express = require("express");
 const app = express();
-const Book = require('./BookSchema');
-const cors = require('cors');
+const Book = require("./BookSchema");
+const cors = require("cors");
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/BookShop', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect("mongodb://localhost:27017/BookShop", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error("MongoDB connection error:", err));
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
@@ -18,9 +22,8 @@ app.use(express.json());
 const port = 3001;
 
 // RESTful Endpoints
-
 // POST endpoint to add a new book
-app.post('/books', async (req, res) => {
+app.post("/books", async (req, res) => {
   try {
     const newBook = new Book(req.body);
     await newBook.save();
@@ -31,7 +34,7 @@ app.post('/books', async (req, res) => {
 });
 
 // GET endpoint to fetch all books
-app.get('/books', async (req, res) => {
+app.get("/books", async (req, res) => {
   try {
     const books = await Book.find();
     res.status(200).json(books);
@@ -41,7 +44,7 @@ app.get('/books', async (req, res) => {
 });
 
 // GET endpoint to fetch a single book by ID
-app.get('/books/:id', async (req, res) => {
+app.get("/books/:id", async (req, res) => {
   try {
     const book = await Book.findById(req.params.id);
     if (!book) {
@@ -55,9 +58,11 @@ app.get('/books/:id', async (req, res) => {
 });
 
 // PUT endpoint to update a book
-app.put('/books/:id', async (req, res) => {
+app.put("/books/:id", async (req, res) => {
   try {
-    const updatedBook = await Book.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const updatedBook = await Book.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
     if (!updatedBook) {
       res.status(404).json({ message: "Book not found" });
     } else {
@@ -69,9 +74,9 @@ app.put('/books/:id', async (req, res) => {
 });
 
 // DELETE endpoint to delete a book
-app.delete('/books/:id', async (req, res) => {
+app.delete("/books/:id", async (req, res) => {
   try {
-    console.log('Deleting book with ID:', req.params.id);
+    console.log("Deleting book with ID:", req.params.id);
     const deletedBook = await Book.findByIdAndDelete(req.params.id);
     if (!deletedBook) {
       res.status(404).json({ message: "Book not found" });
@@ -85,20 +90,15 @@ app.delete('/books/:id', async (req, res) => {
 });
 
 // POST endpoint to bulk add books
-app.post('/books/bulk', async (req, res) => {
+app.post("/books/bulk", async (req, res) => {
   try {
-    const books = req.body; // Assuming the request body contains an array of book objects
-    
-    // Implement logic to process and add the books to the database
-    // For example, you can use Book.insertMany(books) to insert the array of books into the database
-    
-    // Assuming Book is your Mongoose model
+    const books = req.body;
     const insertedBooks = await Book.insertMany(books);
 
     if (insertedBooks) {
-      res.status(201).json({ message: 'Books added successfully' });
+      res.status(201).json({ message: "Books added successfully" });
     } else {
-      res.status(400).json({ message: 'Failed to add books to the database' });
+      res.status(400).json({ message: "Failed to add books to the database" });
     }
   } catch (error) {
     res.status(400).json({ message: error.message });
@@ -111,6 +111,6 @@ app.listen(port, () => {
 });
 
 // Test
-app.get('/test', (req, res) => {
-    res.send('Server is working!');
+app.get("/test", (req, res) => {
+  res.send("Server is working!");
 });
