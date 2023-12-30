@@ -1,7 +1,6 @@
 // AuthContext.js
 // Imports
-import React, { createContext, useContext, useState } from 'react';
-
+import React, { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext(null);
 
@@ -26,7 +25,9 @@ export const AuthProvider = ({ children }) => {
 
   // Providing context to children
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, login, logout, userRole }}>
+    <AuthContext.Provider
+      value={{ isLoggedIn, setIsLoggedIn, login, logout, userRole }}
+    >
       {children}
     </AuthContext.Provider>
   );

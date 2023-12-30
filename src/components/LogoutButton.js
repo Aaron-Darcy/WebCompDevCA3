@@ -1,19 +1,19 @@
 // LogoutButton.js
 // Imports
-import React from 'react';
-import { useAuth } from './AuthContext.js';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useAuth } from "./AuthContext.js";
+import { useNavigate } from "react-router-dom";
 
 function LogoutButton() {
   // Accessing the logout function from the AuthContext
   const { logout } = useAuth();
-  // Hook to navigate 
+  // Hook to navigate
   const navigate = useNavigate();
 
   // Function to handle logout process
   const handleLogout = () => {
-    logout(); 
-    navigate('/login');
+    logout();
+    navigate("/login");
   };
 
   // Rendering the logout button

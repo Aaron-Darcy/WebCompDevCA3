@@ -40,7 +40,7 @@ const CustomerPage = () => {
   const handleSelectBook = (book) => {
     setSelectedBook(book);
     // Reset quantity when selecting a new book
-    setQuantity(1); 
+    setQuantity(1);
   };
 
   // Function to handle adding the selected book to the cart
@@ -81,7 +81,7 @@ const CustomerPage = () => {
               "Content-Type": "application/json",
             },
             // send the new stock as part of the request
-            body: JSON.stringify({ stock: newStock }), 
+            body: JSON.stringify({ stock: newStock }),
           });
         } catch (error) {
           console.error("Error updating book stock:", error);
@@ -102,7 +102,7 @@ const CustomerPage = () => {
     setCart([]);
     alert("Checking out!");
     // Re-fetch books to update the local state
-    fetchBooks(); 
+    fetchBooks();
   };
 
   // Function to toggle dark mode
